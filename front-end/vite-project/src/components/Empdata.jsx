@@ -27,7 +27,7 @@ useEffect(()=>{
 async function DeleteUser(id){
      try{
          const deleteUser = await axios.delete(`http://localhost:3000/delete/${id}`);
-         setEmpdata((prevData) => prevData.filter((emp) => emp.empid !== id)); // this code is to reflect new data after deletion without refreshing the page
+         setEmpdata((prevData) => prevData.filter((emp) => emp.empid !== id));
         //  const response = deleteUser.data;
         //  console.log(response);
      }catch(err){
